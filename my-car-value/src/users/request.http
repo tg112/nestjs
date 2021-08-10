@@ -1,0 +1,28 @@
+### Create a new user
+
+### Create a User
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "hoge2@example.com",
+    "password" : "123456"
+}
+
+### Get a user
+Get http://localhost:3000/auth/2
+
+### Get all users
+Get http://localhost:3000/auth
+
+### Delete
+Delete http://localhost:3000/auth/1
+
+### Update
+Patch http://localhost:3000/auth/2
+content-type: application/json
+
+{
+
+    "password": "hogehoge"
+}
