@@ -13,7 +13,7 @@ content-type: application/json
 Get http://localhost:3000/auth/2
 
 ### Get all users
-Get http://localhost:3000/auth
+Get http://localhost:3000/auth?email=hoge2@example.com
 
 ### Delete
 Delete http://localhost:3000/auth/1
