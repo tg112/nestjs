@@ -1,19 +1,33 @@
 ### Create a new user
-
-### Create a User
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "hoge2@example.com",
+    "email": "hoge4@example.com",
     "password" : "123456"
 }
+
+### Sign in as an exsisting user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "hoge4@example.com",
+    "password" : "123456"
+}
+
+### Get the currently user
+Get http://localhost:3000/auth/whoami
+
+### Sign out
+POST http://localhost:3000/auth/signout
+
 
 ### Get a user
 Get http://localhost:3000/auth/2
 
 ### Get all users
-Get http://localhost:3000/auth
+Get http://localhost:3000/auth?email=hoge2@example.com
 
 ### Delete
 Delete http://localhost:3000/auth/1
@@ -26,3 +40,10 @@ content-type: application/json
 
     "password": "hogehoge"
 }
+
+### Cookieのサンプル
+### Set a color
+# Get http://localhost:3000/auth/colors/blue
+
+### Get a color
+# Get http://localhost:3000/auth/colors
