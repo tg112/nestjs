@@ -18,7 +18,7 @@ export class AuthService {
     // set if email is in use
     const users = await this.usersService.find(email);
     if (users.length) {
-      throw new BadRequestException('email in iuse');
+      throw new BadRequestException('email in use');
     }
     // Hash the password
     // Genarate a salt
