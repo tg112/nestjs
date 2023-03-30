@@ -13,3 +13,17 @@ API の設計してから、Module の設計をするとよい
 3. Connect the entity to the root connection(in app module)
 
 ### TypeOrm
+
+### hash
+- passwords in plain text, bad
+- password => input[hashing Function]output => hash
+- very small changes to the input result in a complete different hash
+- rainbow table attack(ランダムにpasswordを繰り返し送り続ける) => saltを食えることで防げる
+
+### cookie session
+- Cookie-session library looks at the 'Cookie' header
+- Cookie-session decodes the string, resulting in an object
+- We get access to session object in a request handler using a decorator
+- We add/remove/change properties on the session object
+- Cookie-session sees the updated session and turns it into an encrypted string
+- String sent back in the 'Set-cookie' header on the response object
