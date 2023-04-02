@@ -21,7 +21,7 @@ export class SeriazlizeInterceptor implements NestInterceptor {
   constructor(private dto: any) {}
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     // Run something before a request is handled by the request
-    console.log('Im running before the handler', context);
+    // console.log('Im running before the handler', context);
     return next.handle().pipe(
       map((data: any) => {
         // Run something before the response is sent out
