@@ -1,0 +1,47 @@
+POST http://localhost:3000/items
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNTY4NTE1ZC01OWNmLTQwNWItYWMyNC01YTc0YWFiMDIzMmIiLCJ1c2VybmFtZSI6IkJvYiIsInN0YXR1cyI6IkZSRUUiLCJpYXQiOjE3Njc2NDExMzksImV4cCI6MTc2NzY0NDczOX0.RgcAXgKzwr8QkRkNNQuFMESxAtQOWDcpsci7gWu-Ygk
+
+{
+    "name": "Item 1",
+    "price": 100,
+    "description": "Item 1 description"
+}
+
+###
+GET http://localhost:3000/items
+Content-Type: application/json
+
+###
+GET http://localhost:3000/items/8f02f651-139f-4674-9bce-c0757629f55c
+Content-Type: application/json
+
+###
+PUT http://localhost:3000/items/3bf5d82d-2616-4f03-a29c-0fd0a4484d5a/status
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNTY4NTE1ZC01OWNmLTQwNWItYWMyNC01YTc0YWFiMDIzMmIiLCJ1c2VybmFtZSI6IkJvYiIsInN0YXR1cyI6IkZSRUUiLCJpYXQiOjE3Njc2NDExMzksImV4cCI6MTc2NzY0NDczOX0.RgcAXgKzwr8QkRkNNQuFMESxAtQOWDcpsci7gWu-Ygk
+
+###
+DELETE http://localhost:3000/items/3bf5d82d-2616-4f03-a29c-0fd0a4484d5a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNTY4NTE1ZC01OWNmLTQwNWItYWMyNC01YTc0YWFiMDIzMmIiLCJ1c2VybmFtZSI6IkJvYiIsInN0YXR1cyI6IkZSRUUiLCJpYXQiOjE3Njc2NDExMzksImV4cCI6MTc2NzY0NDczOX0.RgcAXgKzwr8QkRkNNQuFMESxAtQOWDcpsci7gWu-Ygk
+
+### 
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "name": "Bob",
+    "email": "example@example.com",
+    "password": "Aa!1bcdef",
+    "status": "FREE" 
+}
+
+###
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "example@example.com",
+    "password": "Aa!1bcdef"
+}
